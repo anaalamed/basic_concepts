@@ -14,9 +14,10 @@ function CountRendering() {
       <input
         type="text"
         value={inputValue}
+        data-testid="input"
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <p>Render Count: {count.current}</p>
+      <p data-testid="renderCount">Render Count: {count.current}</p>
     </>
   );
 }

@@ -10,14 +10,16 @@ function CountRendering() {
 
   return (
     <>
-      <h3>Does Not Cause Re-renders</h3>
+      <h3>Count Re-renders</h3>
       <input
         type="text"
         value={inputValue}
         data-testid="input"
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <p data-testid="renderCount">Render Count: {count.current}</p>
+      <p >
+        Render Count: <span data-testid="renderCount">{count.current}</span>
+      </p>
     </>
   );
 }

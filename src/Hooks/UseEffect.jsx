@@ -49,8 +49,15 @@ function Counter() {
   return (
     <>
       <h3>useEffect(function, [count])- runs on count changes</h3>
-      <p data-testid="counter">Count: {count}</p>
-      <button data-testid="increment" onClick={() => setCount((c) => c + 1)}>+</button>
+      <p >
+        Count: <span data-testid="counter" >{count}</span>
+      </p>
+      <button
+
+        data-testid="increment"
+        onClick={() => setCount((c) => c + 1)}>
+        +
+      </button>
       <p data-testid="calculation">Calculation: {calculation}</p>
     </>
   );

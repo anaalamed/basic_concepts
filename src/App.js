@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { MyComponentWithLoading } from "./HOC/WithLoading";
+import MyComponentWithLogger from "./HOC/WithLogger";
+import { InfiniteTimer, Timer, Counter } from "./Hooks/UseEffect";
+import {
+  AccessDomElements,
+  CountRendering,
+  TrackStateChanges,
+} from "./Hooks/UseRef";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Interview basic questions</h1>
+
+      <h2>HOC</h2>
+      <MyComponentWithLoading />
+      <MyComponentWithLogger />
+
+      <h2>UseEffect</h2>
+      <InfiniteTimer />
+      <Timer />
+      <Counter />
+
+      <h2>UseRef</h2>
+      <CountRendering />
+      <AccessDomElements />
+      <TrackStateChanges />
     </div>
   );
 }

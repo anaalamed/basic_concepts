@@ -9,6 +9,7 @@ import HooksComponent from "./react/Hooks/HooksC";
 import UseEffect from "./react/Hooks/UseEffect";
 import Useref from "./react/Hooks/UseRef";
 import HosComponent from "./react/HOC/hocC";
+import State from "./react/Hooks/state/State";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
             <Route path="hooks" element={<HooksComponent />}>
               <Route path="useEffect" element={<UseEffect />} />
               <Route path="useRef" element={<Useref />} />
+              <Route path="state" element={<State />} />
             </Route>
             <Route path="hoc" element={<HosComponent />} />
           </Route>

@@ -1,12 +1,11 @@
-import "./App.css";
-import { MyComponentWithLoading } from "./HOC/WithLoading";
-import MyComponentWithLogger from "./HOC/WithLogger";
-import { InfiniteTimer, Timer, Counter } from "./Hooks/UseEffect";
+import { MyComponentWithLoading } from "./react/HOC/WithLoading";
+import MyComponentWithLogger from "./react/HOC/WithLogger";
+import { InfiniteTimer, Timer, Counter } from "./react/Hooks/UseEffect";
 import {
   AccessDomElements,
   CountRendering,
   TrackStateChanges,
-} from "./Hooks/UseRef";
+} from "./react/Hooks/UseRef";
 import Closure from "./js/jsComponent";
 
 function App() {

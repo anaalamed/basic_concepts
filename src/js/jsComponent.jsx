@@ -1,5 +1,6 @@
 import { counterClosure, cacheClosure, cacheSumClosure, personClosure } from "./closure";
 import { sum2Currying, sumNCurrying } from "./currying";
+import { promiseThenCatch, promiseAsyncAwait, promiseAll, eventLoopExample } from "./promises";
 
 const JsComponent = () => {
   console.log("%cClosures!", 'background-color: blue')
@@ -12,6 +13,12 @@ const JsComponent = () => {
   sum2Currying()
   sumNCurrying()
 
+  console.log("%cPromises!", 'background-color: blue')
+  promiseThenCatch()
+  promiseAsyncAwait()
+  promiseAll()
+  eventLoopExample()
+
   return (
     <div >
       <h2>JS</h2>
@@ -20,6 +27,9 @@ const JsComponent = () => {
       <p>Check console!</p>
 
       <h2>Currying</h2>
+      <p>Check console!</p>
+
+      <h2>Promises</h2>
       <p>Check console!</p>
     </div>
   );

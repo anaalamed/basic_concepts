@@ -7,6 +7,7 @@ import {
   CountRendering,
   TrackStateChanges,
 } from "./Hooks/UseRef";
+import Closure from "./js/jsComponent";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
       <CountRendering />
       <AccessDomElements />
       <TrackStateChanges />
+
+      <h2>JS</h2>
+      <Closure />
     </div>
   );
 }

@@ -47,7 +47,6 @@ function TrackStateChanges() {
   useEffect(() => {
     // change does'n cause re-rendeing 
     previousInputValue.current = inputValue;
-    console.log("useEffect: ", inputValue)
   }, [inputValue]);
 
   return (

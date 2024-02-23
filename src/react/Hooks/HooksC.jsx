@@ -12,6 +12,9 @@ function HooksComponent() {
           <li>
             <Link to="useRef">useRef</Link>
           </li>
+          <li>
+            <Link to="state">state</Link>
+          </li>
         </ul>
       </nav>
 

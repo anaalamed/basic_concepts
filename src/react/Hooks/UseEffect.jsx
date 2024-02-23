@@ -63,4 +63,15 @@ function Counter() {
   );
 }
 
-export { InfiniteTimer, Timer, Counter };
+const UseEffect = () => {
+
+  return (
+    <div >
+      <h2>UseEffect</h2>
+      <InfiniteTimer />
+      <Timer />
+      <Counter />
+    </div>
+  );
+}
+export default UseEffect;

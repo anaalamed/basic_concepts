@@ -63,4 +63,15 @@ function TrackStateChanges() {
   );
 }
 
-export { CountRendering, AccessDomElements, TrackStateChanges };
+const Useref = () => {
+
+  return (
+    <div >
+      <h2>UseRef</h2>
+      <CountRendering />
+      <AccessDomElements />
+      <TrackStateChanges />
+    </div>
+  );
+}
+export default Useref;

@@ -14,10 +14,12 @@ const JsComponent = () => {
 
   return (
     <div >
+      <h2>JS</h2>
+
       <h2>Closures</h2>
+      <p>Check console!</p>
 
       <h2>Currying</h2>
-
       <p>Check console!</p>
     </div>
   );

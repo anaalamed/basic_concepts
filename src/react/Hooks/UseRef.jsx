@@ -47,7 +47,6 @@ function TrackStateChanges() {
   useEffect(() => {
     // change does'n cause re-rendeing 
     previousInputValue.current = inputValue;
-    console.log("useEffect: ", inputValue)
   }, [inputValue]);
 
   return (
@@ -64,4 +63,15 @@ function TrackStateChanges() {
   );
 }
 
-export { CountRendering, AccessDomElements, TrackStateChanges };
+const Useref = () => {
+
+  return (
+    <div >
+      <h2>UseRef</h2>
+      <CountRendering />
+      <AccessDomElements />
+      <TrackStateChanges />
+    </div>
+  );
+}
+export default Useref;

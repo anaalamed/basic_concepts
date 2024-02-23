@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useContext, createContext } from "react";
 
 function UseState() {
   const [count, setCount] = useState(0);
@@ -40,6 +40,30 @@ function UseReducer() {
   );
 }
 
+// useContext - to avoid prop drilling
+const UserContext = createContext()
+
+function App() {
+  const [user, setUser] = useState("Ana");
+  return (
+    <UserContext.Provider value={user}>
+      <p>{`Hello ${user}!`}</p>
+      <UseContext />
+    </UserContext.Provider>
+  );
+
+}
+
+function UseContext() {
+  const user = useContext(UserContext);
+
+  return (
+    <>
+      <p>{`Hello ${user} again - from inner component!`}</p>
+    </>
+  );
+}
+
 const State = () => {
 
   return (
@@ -50,6 +74,9 @@ const State = () => {
 
       <h2>UseReducer</h2>
       <UseReducer />
+
+      <h2>UseContext</h2>
+      <App />
     </div>
   );
 }

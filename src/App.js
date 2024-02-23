@@ -6,7 +6,7 @@ import {
   CountRendering,
   TrackStateChanges,
 } from "./react/Hooks/UseRef";
-import Closure from "./js/jsComponent";
+import JsComponent from "./js/jsComponent";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
       <TrackStateChanges />
 
       <h2>JS</h2>
-      <Closure />
+      <JsComponent />
     </div>
   );
 }

@@ -16,13 +16,3 @@ function sum(arr) {
 }
 
 const arr = [1, 2, 3, [4, 5]];
-
-// ______________________ currying _____________________________
-function add(x) {
-  return function (y) {
-    return x + y;
-  };
-}
-
-let add10 = add(10);
-console.log(add10(3));

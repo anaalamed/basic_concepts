@@ -1,4 +1,5 @@
 import axios from "axios";
+import redisClient from "./redis.js";
 
 async function fetchApiData(species) {
   const apiResponse = await axios.get(
@@ -10,14 +11,25 @@ async function fetchApiData(species) {
 
 export async function getSpeciesData(req, res) {
   const species = req.params.species;
-  // let results;
+  let isCached = false;
+
   try {
-    const results = await fetchApiData(species);
-    if (results.length === 0) {
-      throw "API returned an empty array";
+    let results;
+    const cacheResults = await redisClient.get(species);
+
+    if (cacheResults) {
+      isCached = true;
+      results = JSON.parse(cacheResults);
+    } else {
+      results = await fetchApiData(species);
+      if (results.length === 0) {
+        throw "API returned an empty array";
+      }
+      await redisClient.set(species, JSON.stringify(results));
     }
+
     res.send({
-      fromCache: false,
+      fromCache: isCached,
       data: results,
     });
   } catch (error) {

@@ -1,21 +1,21 @@
 import React from 'react'
-import { Counter } from '../../src/Hooks/UseEffect'
+import UseEffect from "../../src/react/Hooks/UseEffect"
 
 describe('<Counter />', () => {
   it('renders', () => {
-    cy.mount(<Counter />)
+    cy.mount(<UseEffect />)
   })
 
   it('initial state', () => {
     it('renders', () => {
-      cy.mount(<Counter />)
+      cy.mount(<UseEffect />)
       cy.get('[data-testid=counter]').should('have.text', '0')
     })
   })
 
   it("changing input + fires a change event", () => {
     const onChangeSpy = cy.spy().as('onChangeSpy')
-    cy.mount(<Counter onChange={onChangeSpy} />);
+    cy.mount(<UseEffect onChange={onChangeSpy} />);
 
     cy.get('[data-testid=increment]').click();
 

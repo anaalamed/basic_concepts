@@ -8,8 +8,8 @@
 - HOC components examples: WithLogger, WithLoading
 - Difference between Functional and Class components example
 - Basic testing examples:
-  - Jest
-  - Cypress
+  - Jest - (npm run test)
+  - Cypress (npx cypress open)
 - Hooks:
   - UseEffect
   - UseRef

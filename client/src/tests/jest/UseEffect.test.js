@@ -1,8 +1,8 @@
 import { render, fireEvent, screen } from "@testing-library/react";
-import { Counter } from "../../Hooks/UseEffect";
+import UseEffect from "../../react/Hooks/UseEffect";
 
 test("increments counter and calculate", () => {
-  render(<Counter />);
+  render(<UseEffect />);
 
   const counter = screen.getByTestId("counter");
   const incrementBtn = screen.getByTestId("increment");

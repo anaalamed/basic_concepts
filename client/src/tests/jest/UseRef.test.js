@@ -1,8 +1,8 @@
 import { render, fireEvent, screen } from "@testing-library/react";
-import { CountRendering } from "../../Hooks/UseRef";
+import UseRef from "../../react/Hooks/UseRef";
 
 test("set input value", () => {
-  render(<CountRendering />);
+  render(<UseRef />);
 
   const counter = screen.getByTestId("renderCount");
   const input = screen.getByTestId("input");
@@ -13,7 +13,7 @@ test("set input value", () => {
 });
 
 test("set input value twice", () => {
-  render(<CountRendering />);
+  render(<UseRef />);
 
   const counter = screen.getByTestId("renderCount");
   const input = screen.getByTestId("input");
